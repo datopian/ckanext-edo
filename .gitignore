@@ -1,0 +1,6 @@
+*.pyc
+*~
+*.swp
+*.swo
+.DS_Store
+ckanext_edo.egg-info/*
