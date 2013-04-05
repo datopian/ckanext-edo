@@ -26,6 +26,6 @@ setup(
 	"""
         [ckan.plugins]
 	# Add plugins here, eg
-	# myplugin=ckanext.edo:PluginClass
+    edo=ckanext.edo.plugin:EdoPlugin
 	""",
 )
