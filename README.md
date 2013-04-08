@@ -7,7 +7,7 @@ Clone this repo:
 Activate your virtualenv, cd into the ckanext-edo dir, and install the plugin
 into your virtualenv:
 
-    ckanext-edo $ python setup.pt develop
+    ckanext-edo $ python setup.py develop
 
 Add the `edo` plugin to the `plugins` list in your `development.ini` file, for
 example:
