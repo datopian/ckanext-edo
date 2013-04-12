@@ -5,8 +5,7 @@
 
 
 a,
-.btn-link:hover,
-.btn-link:focus {
+.btn-link {
   color: darken(@primary, 10%);
 }
 a:hover,
@@ -298,6 +297,7 @@ body {
   box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
 }
 
+/* Tags */
 .hero .tags {
   background-color: transparent;
 }
@@ -305,21 +305,33 @@ body {
   text-shadow: 0px 0px 2px #000;
   filter: dropshadow(color=#000, offx=0, offy=0);
 }
-.hero .tags ul a.tag {
+.hero .tags ul a.tag,
+.tags ul.tag-list a.tag {
 	background:#FFF;
 	color:@primary;
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
-.hero .tags ul a.tag:before {
+.hero .tags ul a.tag:before,
+.tags ul.tag-list a.tag:before {
 	border-left-color:#FFF;
 }	
 .hero .tags ul a.tag:after {
 	background-color:#ebecf0;
-}		
-.hero .tags ul a.tag:hover {
+}
+.tags ul.tag-list a.tag:after {
+	background-color:#F5F5F5; /* well colour */
+}	
+.hero .tags ul a.tag:hover,
+.tags ul.tag-list a.tag:hover {
 	background:@primary;
 	color:@primary-fore;
 }	
-.hero .tags ul a.tag:hover:before {
+.hero .tags ul a.tag:hover:before,
+.tags ul.tag-list a.tag:hover:before {
 	border-left-color:@primary;
+}
+
+.hero .tags ul li:before,
+.tags ul.tag-list li:before {
+	border-color:transparent transparent transparent rgba(0, 0, 0, 0.1); /* shadow colour */
 }	
