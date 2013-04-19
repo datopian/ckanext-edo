@@ -400,7 +400,9 @@ body {
 }
 .hero .tags ul a.tag:before,
 .tags ul.tag-list a.tag:before {
-	border-left-color:#FFF;
+	border-color: rgb(255,255,255); /* Fallback for IE8 */
+	border-color: rgba(255,255,255,0);
+	border-left-color:rgba(255,255,255,1);
 }	
 .hero .tags ul a.tag:after {
 	background-color:#ebecf0;
@@ -415,10 +417,14 @@ body {
 }	
 .hero .tags ul a.tag:hover:before,
 .tags ul.tag-list a.tag:hover:before {
-	border-left-color:@primary;
+	border-color: @primary; /* Fallback for IE8 */
+	border-color: fade(@primary, 0%);
+	border-left-color:fade(@primary, 100%);
 }
 
 .hero .tags ul li:before,
 .tags ul.tag-list li:before {
-	border-color:transparent transparent transparent rgba(0, 0, 0, 0.1); /* shadow colour */
+	border-color:rgb(255,255,255); /* Fallback for IE8 */
+	border-color:rgba(0, 0, 0, 0);
+	border-left-color:rgba(0, 0, 0, 0.1); /* shadow colour */
 }	
