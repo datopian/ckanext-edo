@@ -1,6 +1,7 @@
 {% ckan_extends %}
+
 {% block styles %}
   {{ super() }}
-  <link rel="stylesheet" href="/styles/edo.css" />
+  {% resource 'ckanext-edo/styles/edo.css' %}
 {% endblock %}
       

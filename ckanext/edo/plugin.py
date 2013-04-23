@@ -16,4 +16,4 @@ class EdoPlugin(plugins.SingletonPlugin):
         tk.add_public_directory(config, 'public')
 
         # Add this plugin's fanstatic dir.
-        tk.add_resource('fanstatic', 'ckanext-datagm')
+        tk.add_resource('fanstatic', 'ckanext-edo')
