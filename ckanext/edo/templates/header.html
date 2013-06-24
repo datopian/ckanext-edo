@@ -3,3 +3,10 @@
 {% block header_logo %}
   <a class="logo" href="{{ h.url('home') }}"><img src="{{ h.url_for_static('/images/logo.png') }}" alt="{{ g.site_title }}" /></a>
 {% endblock %}
+
+{% block header_site_navigation_tabs %}
+{{ super() }}
+<li><a href="//apps.edostate.gov.ng">Apps</a></li>
+<li><a href="//datablog.edostate.gov.ng">Blog</a></li>
+{% endblock %}
+

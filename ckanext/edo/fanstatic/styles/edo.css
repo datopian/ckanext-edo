@@ -3,6 +3,10 @@
   padding-top: 8px;
   padding-bottom: 7px;
 }
+.masthead .logo img {
+    width: 245px;
+    margin-top: 6px;
+}
 /* Main */
 .nav-item.active > a:before {
   background-image: none;

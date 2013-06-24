@@ -1,0 +1,62 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('Accessibility Statement') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Accessibility Statement'), controller='ckanext.edo.plugin:EdoController', action='accessibility' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+      <h1>Accessibility Statement</h1>
+      <p>The portal <a
+        href="http://data.edostate.gov.ng">data.edostate.gov.ng</a> is managed
+      by a team drawn from the Information Communication Technology Agency
+      (ICTA), Edo State Government and are committed to equitable access to
+      information, regardless of the technologies used. We are continually
+      striving to make the portal accessible and functional to all.<p>
+
+      <h2>Standards Compliance</h2>
+      </p>We are working towards ensuring that all pages on this site comply
+      with priority 2 guidelines of the <a
+        href="http://www.w3.org/WAI/intro/wcag.php">W3C Web Content
+        Accessibility Guidelines</a>. Whilst <a
+        href="http://data.edostate.gov.ng">data.edostate.gov.ng</a> strives to
+      adhere to the accepted guidelines and standards for accessibility and
+      usability, it is not always possible to do so in all areas of the
+      website. We are continually seeking out solutions that will bring all
+      areas of the site up to the same level of overall accessibility.</p>
+
+      <h2>How Do I Make The Text Bigger So That It Is Easier For Me To Read?</h2>
+      <p>Some users might find screen text easier to read by increasing the
+      size at which text is displayed. To do this you should simply adjust your
+      browser’s settings.</p>
+      <ul>
+        <li>Using Internet Explorer, go to View &gt; Text size &gt; and select the size you want.</li>
+        <li>Using Firefox, go to the View menu, select Zoom and then either Increase Ctrl + +, Decrease Ctrl
+        + – or Normal Ctrl + 0.</li>
+        <li>Using Opera, View &gt; Zoom &gt; and select the size you want.</li>
+      </ul>
+
+      <h2>What Are PDFs And How Do I Read Them?</h2>
+      <p>PDF stands for Portable Document File. You need a plug-in called
+      Adobe Acrobat Reader to view these files which you can download for
+      free from <a href="http://get.adobe.com/reader/">Adobe’s website</a>.</p>
+      <p>Users who have concerns about accessibility should visit Adobe’s
+      accessibility website. Recent versions of Acrobat Reader have a Read Out
+      Loud facility, which can be found under the View menu.</p>
+
+      <h2>How Can I View A Word File If I Don't Have Word Software?</h2>
+      <p>A free Word viewer is available from Microsoft at the <a
+        href="http://www.microsoft.com/en-us/download/default.aspx">Microsoft
+        Download Center</a>. You’ll find Word, Excel and PowerPoint viewers
+      here too. Open source versions of similar software can be accessed at <a
+        href="http://www.openoffice.org">www.openoffice.org</a>.</p>
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}
