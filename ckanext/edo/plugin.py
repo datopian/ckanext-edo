@@ -29,6 +29,7 @@ class EdoPlugin(plugins.SingletonPlugin):
             m.connect('coc', '/code-of-conduct', action='coc')
             m.connect('faq', '/faq', action='faq')
             m.connect('remarks-and-speeches', '/remarks-and-speeches', action='remarks_and_speeches')
+            m.connect('contact', '/contact', action='contact')
         return route_map
 
     def after_map(self, route_map):
@@ -51,3 +52,6 @@ class EdoController(base.BaseController):
 
     def remarks_and_speeches(self):
         return base.render('content/remarks_and_speeches.html')
+
+    def contact(self):
+        return base.render('content/contact.html')

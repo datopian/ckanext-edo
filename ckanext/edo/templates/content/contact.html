@@ -1,0 +1,38 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('Contact Us') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Contact Us'), controller='ckanext.edo.plugin:EdoController', action='remarks_and_speeches' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+      <h1>Contact Us</h1>
+
+      <h2>Email</h2>
+      <p>Email <a
+        href="mailto:opendata@edostate.gov.ng">opendata@edostate.gov.ng</a>
+      with your enquiry, comments or suggestions about the portal.</p>
+
+      <h2>Telephone</h2>
+      <p>Call us on +2348074721802 during office hours.</p>
+
+      <h2>Twitter Hashtag</h2>
+      <p><a href="https://twitter.com/search?q=%23edopendata">#edopendata</a>
+
+      <h2>Address</h2>
+      <address>
+        <p>Information Communication Technology Agency<br />
+        Government House<br />
+        Dennis Osadebe Avenue, GRA<br />
+        Benin City, Edo State</p>
+      </address>
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}
