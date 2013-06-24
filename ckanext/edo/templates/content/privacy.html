@@ -1,0 +1,79 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('Privacy Statement') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Privacy Statement'), controller='ckanext.edo.plugin:EdoController', action='privacy' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+        <h1>Privacy Statement</h1>
+        <p>The Edo State Government and the CKAN team are committed to providing
+        websites that respect the privacy of visitors. This privacy notice summarizes
+        the privacy practices for the Open Data online activities.</p>
+
+        <p>The purpose of this privacy policy is to let users of the “Site” (<a
+        href="http://data.edostate.gov.ng">http://data.edostate.gov.ng</a>) know when
+        we collect personal information and what we do with it. We do not use, share or
+        transfer personal information in connection with the Site except as set out in
+        this policy.</p>
+
+        <h2>Personal Data Protection</h2>
+
+        <p>Periodically, you may be asked to submit personal information about yourself
+        (e.g. name and e-mail address) in order to receive or use services on our
+        website. Such services include e-mail updates, website feedback, or suggesting
+        an idea / application. Your details in the fields requested, enables the Edo
+        State Government and its service providers to provide you with the services you
+        select. Any personal information you provide to us will only be used by us, our
+        agents and service providers, and will not be disclosed unless we are obliged
+        or permitted to by law to do so.</p>
+
+        <p>If you post or send offensive, inappropriate or objectionable content
+        anywhere on this site, we may use whatever information about you is available
+        to us to stop such behavior.</p>
+
+        <h2>Statistical Information and Cookies</h2>
+
+        <h3>Statistical Information Collected</h3>
+        <p>We may collect statistical information about your visit to help us
+        improve the Site. This information is aggregated and non-personally identifying. It includes:</p>
+        <ul>
+          <li>your IP address;</li>
+          <li>the search terms you used;</li>
+          <li>the pages you accessed on our Site and the links you clicked
+          on;</li>
+          <li>the date and time you visited the site;</li>
+          <li>the referring site (if any) through which you clicked through to
+          this Site;</li>
+          <li>your operating system (e.g., Windows XP, Mac OSX);</li>
+          <li>the type of web browser you use (e.g. Explorer, Firefox, Chrome);
+          and other incidental matters such as screen resolution, the release
+          of your installed Flash version and the language setting of your
+          browser.</li>
+        </ul>
+
+        <h3>Use of Statistical Information</h3>
+        <p>The statistical information referred to above will be viewable by Site
+        administrators and may also be shared with other government agencies.</p>
+
+        <h3>Cookies</h3>
+        <p>This Site generates persistent session cookies for the purpose of
+        monitoring Site usage. The cookies do not collect personal information.
+        You can disable them or clear them out of the web browser you are using
+        to view this Site without affecting your ability to use the Site.</p>
+
+        <h2>Changes To This Privacy Policy</h2>
+        <p>If this privacy policy changes in any way, we will place an updated
+        version on this page. Regularly reviewing this page ensures you are
+        always aware of what information we collect, how we use it and under
+        what circumstances, if any, we will share it with other parties.</p>
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}
