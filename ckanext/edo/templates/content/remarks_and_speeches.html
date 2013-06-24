@@ -1,0 +1,21 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('FAQs') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Remarks and Speeches'), controller='ckanext.edo.plugin:EdoController', action='remarks_and_speeches' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+      <h1>Remarks and Speeches</h1>
+      <p>This is a placeholder... It will be populated with speeches from the Governor and remarks from the
+      visitors...</p>
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}

@@ -25,6 +25,10 @@ class EdoPlugin(plugins.SingletonPlugin):
         with routes.mapper.SubMapper(route_map,
                 controller='ckanext.edo.plugin:EdoController') as m:
             m.connect('privacy', '/privacy', action='privacy')
+            m.connect('accessibility', '/accessibility', action='accessibility')
+            m.connect('coc', '/code-of-conduct', action='coc')
+            m.connect('faq', '/faq', action='faq')
+            m.connect('remarks-and-speeches', '/remarks-and-speeches', action='remarks_and_speeches')
         return route_map
 
     def after_map(self, route_map):
@@ -35,3 +39,15 @@ class EdoController(base.BaseController):
 
     def privacy(self):
         return base.render('content/privacy.html')
+
+    def accessibility(self):
+        return base.render('content/accessibility.html')
+
+    def coc(self):
+        return base.render('content/coc.html')
+
+    def faq(self):
+        return base.render('content/faq.html')
+
+    def remarks_and_speeches(self):
+        return base.render('content/remarks_and_speeches.html')
