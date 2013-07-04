@@ -1,11 +1,14 @@
+/*
+Changes should be made to appropriate LESS files, then compiled into edo.css
+*/
 /* Header */
 .masthead {
   padding-top: 8px;
   padding-bottom: 7px;
 }
-.masthead .logo img {
-    width: 245px;
-    margin-top: 6px;
+.masthead .logo {
+  display: block;
+  margin-top: -3px;
 }
 /* Main */
 .nav-item.active > a:before {
