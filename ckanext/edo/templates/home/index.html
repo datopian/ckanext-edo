@@ -1,6 +1,6 @@
 {% ckan_extends %}
 
-{% block home_primary_text %}
+{% block home_primary_content %}
 <p>Data.edostate.gov.ng is the official data repository for Edo State Government. It provides an easy way to
 find, access and reuse public datasets from the State Government, international organizations and non-
 state actors.</p>
@@ -23,3 +23,13 @@ portal to develop tools and applications which benefit all Edo State citizens.</
 {% endblock %}
 
 {% block home_image %}{% endblock %}
+
+{% block home_search %}
+  <form class="dataset-search module-content clearfix" method="get" action="{% url_for controller='package', action='search' %}">
+    <h3 class="heading">{{ _("Search For Data") }}</h3>
+    <span class="control-group search-giant">
+      <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{ _('eg. Gold Prices') }}" />
+      <button type="submit" value="{{ _('Search') }}">Submit</button>
+    </span>
+  </form>
+{% endblock %}
