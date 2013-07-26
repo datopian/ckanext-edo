@@ -26,7 +26,7 @@ class EdoPlugin(plugins.SingletonPlugin):
                 controller='ckanext.edo.plugin:EdoController') as m:
             m.connect('privacy', '/privacy', action='privacy')
             m.connect('accessibility', '/accessibility', action='accessibility')
-            m.connect('coc', '/code-of-conduct', action='coc')
+            m.connect('tou', '/terms-of-use', action='tou')
             m.connect('faq', '/faq', action='faq')
             m.connect('remarks-and-speeches', '/remarks-and-speeches', action='remarks_and_speeches')
             m.connect('contact', '/contact', action='contact')
@@ -44,8 +44,8 @@ class EdoController(base.BaseController):
     def accessibility(self):
         return base.render('content/accessibility.html')
 
-    def coc(self):
-        return base.render('content/coc.html')
+    def tou(self):
+        return base.render('content/tou.html')
 
     def faq(self):
         return base.render('content/faq.html')

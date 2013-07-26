@@ -1,16 +1,16 @@
 {% extends "page.html" %}
 
-{% block subtitle %}{{ _('Code of Conduct') }}{% endblock %}
+{% block subtitle %}{{ _('Terms of Use') }}{% endblock %}
 
 {% block breadcrumb_content %}
-  <li class="active">{% link_for _('Code of Conduct'), controller='ckanext.edo.plugin:EdoController', action='coc' %}</li>
+  <li class="active">{% link_for _('Terms of Use'), controller='ckanext.edo.plugin:EdoController', action='tou' %}</li>
 {% endblock %}
 
 {% block primary %}
   <article class="module">
     <div class="module-content">
       {% block about %}
-      <h1>Code of Conduct</h1>
+      <h1>Terms of Use</h1>
       <p>The data provided is for the general public based on public sector datasets.
       Developers and Users are free to utilize these data in developing applications
       and use as they wish but not without these basic rules.</p>
