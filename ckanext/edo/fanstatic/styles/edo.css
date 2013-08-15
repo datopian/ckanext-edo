@@ -77,6 +77,10 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
   border-bottom-left-radius: 0px;
 }
 /* Tags */
+.hero .tags {
+  height: 29px;
+  overflow: hidden;
+}
 .hero .tags ul,
 .tags ul.tag-list {
   list-style: none;
@@ -84,6 +88,9 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
 .hero .tags ul {
   margin: 0;
   padding: 0;
+}
+.hero .tags ul li {
+  margin-bottom: 12px;
 }
 .tags ul.tag-list {
   padding: 15px;
@@ -96,6 +103,9 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
   line-height: 24px;
   position: relative;
   font-size: 11px;
+  white-space: nowrap;
+  /* for ie8 */
+
 }
 .hero .tags ul li,
 .hero .tags ul a.tag {
