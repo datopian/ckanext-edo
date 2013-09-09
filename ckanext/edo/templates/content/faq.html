@@ -9,24 +9,18 @@
 {% block primary %}
   <article class="module">
     <div class="module-content">
-      {% block about %}
+      {% bjock about %}
       <h1>FAQ</h1>
-      <h4><h4>Q. What if there is data I want but cannot find it?"</h4>
-      <p>A. Ask us! Submit a request for data using the Data Request button on
-      the homepage.</p>
+      <h4>Q. What if there is data I want but cannot find it?"</h4>
+      <p>A. Ask us! On our homepage, use the <a
+        href="http://datablog.edostate.gov.ng/request">data request
+        link</a>.</p>
 
       <h4>Q. How can people submit applications and visualizations?</h4>
       <p>A. Go to the Apps page, where you’ll find information on all
       applications and visualizations that people have submitted so far, a link
       for submitting your own application and facilities for joining in
       discussions.</p>
-
-      <h4>Q. How can people submit ideas</h4>
-      <p>A. This site is not just for people with technical know-how; it’s also
-      for people who might have a good idea for an application, but aren’t in
-      a position to build it themselves. Go to the ideas page where you’ll find
-      all the ideas that people have submitted and the facility to submit
-      yours.</p>
 
       <h4>Q. How can people use data.edostate.gov.ng?</h4>
       <p>A. The portal uses a search engine to offer several ways of finding
@@ -35,13 +29,13 @@
 
       <h4>Q. Is there a place for developers to discuss ideas, applications and
         using of the data?</h4>
-      <p>A. Yes, the <a href="http://datablog.edostate.gov.ng">blog</a> is
-      for that purpose.  We realize that you’ll want to ask us and each other
+      <p>A. Yes, the <a href="http://datablog.edostate.gov.ng/">blog</a> is for
+      that purpose. We realize that you’ll want to ask us and each other
       questions and we’ll try and help as best we can. There is also a vibrant
       community of developers in the State who meet regularly to discuss ideas
-      around the portal. They can be contacted via email <a
+      around the portal.  They can be contacted via email <a
         href="mailto:info@gsquad.net">info@gsquad.net</a> or website <a
-        href="http://gsquad.net">www.gsquad.net</a>.</p>
+        href="http://gsquad.net/">www.gsquad.net</a>.</p>
 
       <h4>Q. Will more public data become available in the future?</h4>
       <p>A. Yes, this is just the start. As the project matures, more data will
@@ -49,20 +43,19 @@
 
       <h4>Q. What are the commercial use rights if people have commercial
         ideas?</h4>
-      <p>A. The Open Government License enables you to use all our data for
-      commercial purposes. We are delighted that you see a commercial
+      <p>A. The Creative Commons Attribute License enables you to use all our
+      data for commercial purposes. We are delighted that you see a commercial
       opportunity in using our data.</p>
 
       <h4>Q. Under what license is the data available?</h4>
-      <p>A. In general, the data is licensed under the Open Government License.
-      You can read more details on what that means on our license page.</p>
+      <p>A. By “Creative Commons Attribute” License.</p>
 
-      <h4>Q. Are there any "do"s and "don't"s?</h4>
+      <h4>Q. Are there any “do’s and don'ts?”</h4>
       <p>A. We have a simple {% link_for _('terms of use'),
       controller='ckanext.edo.plugin:EdoController', action='tou' %} relating
       to your use of the data in your application. It covers how to relate your
       application data to the data we provide, and simple common-sense usage of
-      the data.</p>
+      the data.
       {% endblock %}
     </div>
   </article>
