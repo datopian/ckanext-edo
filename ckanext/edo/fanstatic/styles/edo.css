@@ -33,23 +33,23 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
 .masthead {
   min-height: 0;
 }
-.masthead .header-image {
+.masthead hgroup {
   float: none;
   height: 78px;
 }
-.masthead .header-image .logo {
+.masthead hgroup .logo {
   display: block;
   position: absolute;
   top: 5px;
 }
-.masthead .header-image .logo img {
+.masthead hgroup .logo img {
   height: 75px;
 }
 @media (min-width: 768px) {
-  .masthead .header-image .logo {
+  .masthead hgroup .logo {
     top: -16px;
   }
-  .masthead .header-image .logo img {
+  .masthead hgroup .logo img {
     height: 89px;
   }
 }
