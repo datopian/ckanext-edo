@@ -1,14 +1,84 @@
 /*
 Changes should be made to appropriate LESS files, then compiled into edo.css
 */
+@font-face {
+  font-family: 'robotoblack';
+  src: url('../fonts/Roboto-Black-webfont.eot');
+  src: url('../fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Black-webfont.woff') format('woff'), url('../fonts/Roboto-Black-webfont.ttf') format('truetype'), url('../fonts/Roboto-Black-webfont.svg#robotoblack') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/Roboto-Bold-webfont.eot');
+  src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold-webfont.woff') format('woff'), url('../fonts/Roboto-Bold-webfont.ttf') format('truetype'), url('../fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/Roboto-Italic-webfont.eot');
+  src: url('../fonts/Roboto-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Italic-webfont.woff') format('woff'), url('../fonts/Roboto-Italic-webfont.ttf') format('truetype'), url('../fonts/Roboto-Italic-webfont.svg#robotoitalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/Roboto-Regular-webfont.eot');
+  src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular-webfont.woff') format('woff'), url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* Header */
 .masthead {
-  padding-top: 8px;
-  padding-bottom: 7px;
+  min-height: 0;
 }
-.masthead .logo {
+.masthead .header-image {
+  float: none;
+  height: 78px;
+}
+.masthead .header-image .logo {
   display: block;
-  margin-top: -3px;
+  position: absolute;
+  top: 5px;
+}
+.masthead .header-image .logo img {
+  height: 75px;
+}
+@media (min-width: 768px) {
+  .masthead .header-image .logo {
+    top: -16px;
+  }
+  .masthead .header-image .logo img {
+    height: 89px;
+  }
+}
+.masthead .nav-collapse {
+  position: static;
+  float: none;
+}
+.masthead .nav-collapse .nav-pills > li > a {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.masthead .nav-collapse .site-search {
+  position: absolute;
+  top: 19px;
+  right: 0;
+}
+.masthead .nav-collapse .site-search input {
+  padding: 10px 40px 10px 15px;
+  border-radius: 0;
+  border-color: #d64c01;
+  width: 240px;
+}
+.masthead .nav-collapse .site-search .btn-search {
+  margin-top: -11px;
+  right: 8px;
+}
+.masthead .nav-collapse .site-search .btn-search i {
+  font-size: 22px;
+  color: #343434;
 }
 /* Main */
 .nav-item.active > a:before {
@@ -34,7 +104,8 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
   padding-top: 10px;
 }
 /* Banner */
-.hero {
+.hero,
+.hero[role="main"] {
   padding: 0;
 }
 .hero:before {
@@ -45,25 +116,18 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
   z-index: 1;
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
   /* FF3.6+ */
-
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)));
   /* Chrome,Safari4+ */
-
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
   /* Chrome10+,Safari5.1+ */
-
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
   /* Opera 11.10+ */
-
   background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
   /* IE10+ */
-
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
   /* W3C */
-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000', endColorstr='#00000000', GradientType=0);
   /* IE6-9 */
-
 }
 .hero > .container {
   padding-top: 20px;
@@ -105,7 +169,6 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
   font-size: 11px;
   white-space: nowrap;
   /* for ie8 */
-
 }
 .hero .tags ul li,
 .hero .tags ul a.tag {
@@ -147,7 +210,6 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
   height: 0;
   border-color: #005d7a;
   /* Fallback for IE8 */
-
   border-color: rgba(0, 93, 122, 0);
   border-left-color: #005d7a;
   border-style: solid;
@@ -178,7 +240,6 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
 .tags ul.tag-list a.tag:hover:before {
   border-color: #003647;
   /* Fallback for IE8 */
-
   border-color: rgba(0, 54, 71, 0);
   border-left-color: #003647;
 }
@@ -191,11 +252,9 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
   height: 0;
   border-color: #005d7a;
   /* Fallback for IE8 */
-
   border-color: rgba(0, 0, 0, 0);
   border-left-color: rgba(0, 0, 0, 0);
   /* shadow colour */
-
   border-style: solid;
   border-width: 12px 0 12px 12px;
   right: -3px;
@@ -403,34 +462,70 @@ input[type="color"]:focus,
 .btn-danger[disabled] {
   background-color: #bd0400;
 }
+body {
+  font-family: roboto;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: robotoblack;
+  font-weight: 900;
+}
 /* Header */
 .account-masthead {
-  background-color: #343434;
+  background-color: #d64c01;
   background-image: none;
+  padding-top: 3px;
+  box-sizing: border-box;
 }
 .account-masthead .account ul li {
-  border-left-color: #000000;
+  border-left-color: rgba(255, 255, 255, 0.3);
 }
 .account-masthead .account .notifications a span {
   background-color: #000000;
 }
 .account-masthead .account ul li a {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: normal;
+  line-height: 26px;
 }
 .account-masthead .account ul li a:hover {
-  color: rgba(255, 255, 255, 0.7);
-  background-color: #000000;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
 }
 .masthead {
   background-color: #d64c01;
   background-image: none;
 }
+.masthead .navigation {
+  background-color: #343434;
+  margin-left: -9999px;
+  margin-right: -9999px;
+  padding-left: 9999px;
+  padding-right: 9999px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 17px;
+}
 .masthead .navigation .nav-pills li a:hover {
-  background-color: #bd4301;
+  background-color: #d64c01;
   color: #ffffff;
 }
 .masthead .navigation .nav-pills li.active a {
   background-color: #ef5501;
+}
+.masthead .btn-navbar,
+.masthead .btn-navbar:hover,
+.masthead .btn-navbar:focus,
+.masthead .btn-navbar:active,
+.masthead .btn-navbar.active,
+.masthead .btn-navbar.disabled,
+.masthead .btn-navbar[disabled] {
+  background-color: #343434;
 }
 .masthead input[type="text"] {
   border-color: #a33a01;
@@ -438,9 +533,6 @@ input[type="color"]:focus,
 .masthead input[type="text"]:focus {
   -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
   box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
-}
-.masthead .site-search input {
-  padding: 5px 10px;
 }
 /* Main */
 [role=main],
@@ -561,7 +653,6 @@ body {
 .tags ul.tag-list a.tag:before {
   border-color: #ffffff;
   /* Fallback for IE8 */
-
   border-color: rgba(255, 255, 255, 0);
   border-left-color: #ffffff;
 }
@@ -571,7 +662,6 @@ body {
 .tags ul.tag-list a.tag:after {
   background-color: #F5F5F5;
   /* well colour */
-
 }
 .hero .tags ul a.tag:hover,
 .tags ul.tag-list a.tag:hover {
@@ -582,7 +672,6 @@ body {
 .tags ul.tag-list a.tag:hover:before {
   border-color: #d64c01;
   /* Fallback for IE8 */
-
   border-color: rgba(214, 76, 1, 0);
   border-left-color: #d64c01;
 }
@@ -590,9 +679,7 @@ body {
 .tags ul.tag-list li:before {
   border-color: #ffffff;
   /* Fallback for IE8 */
-
   border-color: rgba(0, 0, 0, 0);
   border-left-color: rgba(0, 0, 0, 0.1);
   /* shadow colour */
-
 }

@@ -217,15 +217,27 @@ input[type="color"]:focus,
   background-color: darken(@danger, 5%);
 }
 
+body {
+  font-family: roboto;
+  overflow-x:hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: robotoblack;
+  font-weight:900;
+}
+
 
 /* Header */
 .account-masthead {
-  background-color:@secondary;
+  background-color:@primary;
 	background-image:none;
+  padding-top:3px;
+  box-sizing:border-box;
 }
 
 .account-masthead .account ul li {
-	border-left-color: darken(@secondary, 30%);
+	border-left-color: fade(@primary-fore, 30%);
 }
 
 .account-masthead .account .notifications a span {
@@ -233,11 +245,13 @@ input[type="color"]:focus,
 }
 
 .account-masthead .account ul li a {
-  color: fade(@secondary-fore, 60%);
+  color: fade(@primary-fore, 90%);
+  font-weight:normal;
+  line-height:26px;
 }
 .account-masthead .account ul li a:hover {
-	color: fade(@secondary-fore, 70%);
-  background-color: darken(@secondary, 30%);
+	color: @primary-fore;
+  background-color: fade(@primary-fore, 0%);
 }
 
 .masthead {
@@ -245,12 +259,34 @@ input[type="color"]:focus,
 	background-image:none;
 }
 
-.masthead .navigation .nav-pills li a:hover {
-  background-color: darken(@primary, 5%);
-	color:@primary-fore;
+.masthead .navigation {
+  background-color:@secondary;
+  margin-left:-9999px;
+  margin-right:-9999px;
+  padding-left:9999px;
+  padding-right:9999px;
+  font-weight:bold;
+  text-transform:uppercase;
+  font-size:17px;
+  
+  .nav-pills li a:hover {
+    background-color: @primary;
+    color:@primary-fore;
+  }
+  
+  .nav-pills li.active a {
+    background-color: lighten(@primary, 5%);
+  }
 }
-.masthead .navigation .nav-pills li.active a {
-  background-color: lighten(@primary, 5%);
+
+.masthead .btn-navbar,
+.masthead .btn-navbar:hover,
+.masthead .btn-navbar:focus,
+.masthead .btn-navbar:active,
+.masthead .btn-navbar.active,
+.masthead .btn-navbar.disabled,
+.masthead .btn-navbar[disabled] {
+  background-color:@secondary;
 }
 
 .masthead input[type="text"] {
@@ -259,9 +295,6 @@ input[type="color"]:focus,
 .masthead input[type="text"]:focus {
 	-webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
   box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
-}
-.masthead .site-search input {
-  padding: 5px 10px;
 }
 
 

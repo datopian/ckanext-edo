@@ -1,11 +1,62 @@
 /* Header */
 .masthead {
-	padding-top:8px;
-	padding-bottom:7px;
-}
-.masthead .logo {
-	display:block;
-	margin-top:-3px;
+  min-height:0;
+  
+  .header-image {
+    float:none;
+    height:78px;
+    
+    .logo {
+      display:block;
+      position:absolute;
+      top:5px;
+      
+      img {
+        height:75px;
+      }
+      
+      @media (min-width: 768px) {
+        top:-16px;
+        
+        img {
+          height:89px;
+        }
+      }
+    }
+  }
+  
+  .nav-collapse {
+    position:static;
+    float:none;
+    
+    .nav-pills > li > a {
+      margin-bottom: 8px;
+      margin-top: 8px;
+    }
+  
+    .site-search {
+      position: absolute;
+      top:19px;
+      right:0;
+      
+      input {
+        padding: 10px 40px 10px 15px;
+        border-radius:0;
+        border-color: @primary;
+        width:240px;
+      }
+      
+      .btn-search {
+        margin-top: -11px;
+        right: 8px;
+        
+        i {
+          font-size:22px;
+          color:@secondary;
+        }
+      }
+    }
+  }
 }
 
 
@@ -37,7 +88,8 @@
 
 
 /* Banner */
-.hero {
+.hero,
+.hero[role="main"] {
   padding: 0;
 }
 
