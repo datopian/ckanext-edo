@@ -127,16 +127,20 @@
     }
   }
   
+  h3 {
+    text-transform:uppercase;
+    margin:20px 15px;
+  }
+  
   .twitter {
     background-color:@grey;
+      
+    a {
+      color:@primary;
+    }
     
     .container {
       position:relative;
-    }
-    
-    h3 {
-      text-transform:uppercase;
-      margin:20px 15px;
     }
     
     .follow {
@@ -188,10 +192,6 @@
     .tweet {
       margin-right:30px;
       
-      a {
-        color:@primary;
-      }
-      
       @media (min-width: 768px) {
         margin-left:230px;
       }
@@ -233,6 +233,20 @@
           }
         }
       }
+    }
+  }
+  
+  .comments {
+    background-color:#fff;
+    display:none;
+    
+    .fb-comments {
+      margin-left:7px;
+      margin-right:7px;
+    }
+    
+    @media (min-width: 992px) {
+      display:block;
     }
   }
 }

@@ -751,15 +751,18 @@ body {
   padding: 0 0 15px 0;
   border-bottom: solid 2px #eaeaeb;
 }
+.homepage h3 {
+  text-transform: uppercase;
+  margin: 20px 15px;
+}
 .homepage .twitter {
   background-color: #eaeaeb;
 }
+.homepage .twitter a {
+  color: #d64c01;
+}
 .homepage .twitter .container {
   position: relative;
-}
-.homepage .twitter h3 {
-  text-transform: uppercase;
-  margin: 20px 15px;
 }
 .homepage .twitter .follow {
   position: absolute;
@@ -805,9 +808,6 @@ body {
 .homepage .twitter .tweet {
   margin-right: 30px;
 }
-.homepage .twitter .tweet a {
-  color: #d64c01;
-}
 @media (min-width: 768px) {
   .homepage .twitter .tweet {
     margin-left: 230px;
@@ -847,4 +847,17 @@ body {
 }
 .homepage .twitter .interact a.twitter_fav_icon:before {
   content: "\F005";
+}
+.homepage .comments {
+  background-color: #fff;
+  display: none;
+}
+.homepage .comments .fb-comments {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+@media (min-width: 992px) {
+  .homepage .comments {
+    display: block;
+  }
 }
