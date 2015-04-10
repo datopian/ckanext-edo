@@ -94,24 +94,32 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
   border-bottom: 17px solid rgba(140, 160, 166, 0);
   border-left: 6px solid #8ca0a6;
 }
-.site-footer .footer-links > ul {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
+.site-footer {
+  line-height: 28px;
 }
-.site-footer .attribution {
-  float: right;
+.site-footer .links,
+.site-footer .social {
+  padding-top: 15px;
 }
-.site-footer .attribution strong {
-  float: left;
+.site-footer .social a {
+  text-decoration: none;
 }
-.site-footer .attribution .ckan-footer-logo {
-  float: left;
-  margin-left: 10px;
+.site-footer .social i {
+  font-size: 28px;
+  margin-right: 5px;
 }
-.site-footer .lang-select {
-  clear: left;
-  padding-top: 10px;
+@media (min-width: 768px) {
+  .site-footer .links {
+    padding-left: 15px;
+  }
+  .site-footer .social {
+    text-align: right;
+  }
+  .site-footer .social i {
+    font-size: 28px;
+    margin-left: 5px;
+    margin-right: 0;
+  }
 }
 /* Banner */
 .hero,

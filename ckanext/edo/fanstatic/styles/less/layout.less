@@ -76,24 +76,37 @@
 	border-left: 6px solid rgba(140,160,166,1);
 }
 
-.site-footer .footer-links > ul {
-  padding-left:15px;
-  padding-right:15px;
-  padding-bottom:15px;
-}
-.site-footer .attribution {
-	float:right;
-}
-.site-footer .attribution strong {
-	float:left;
-}
-.site-footer .attribution .ckan-footer-logo {
-	float:left;
-	margin-left:10px;
-}
-.site-footer .lang-select {
-	clear:left;
-	padding-top:10px
+.site-footer {
+  line-height:28px;
+  
+  .links,
+  .social {
+    padding-top:15px;
+  }
+  
+  .social {
+    a {
+      text-decoration:none;
+    }
+    i {
+      font-size:28px;
+      margin-right:5px;
+    }
+  }
+    
+  @media (min-width: 768px) {
+    .links {
+      padding-left:15px;
+    }
+    .social {
+      text-align:right;
+      i {
+        font-size:28px;
+        margin-left:5px;
+        margin-right:0;
+      }
+    }
+  }
 }
 
 
