@@ -61,6 +61,12 @@
 
 
 /* Main */
+[role=main],
+.main {
+  margin-left:-20px;
+  margin-right:-20px;
+}
+
 .nav-item.active > a:before {
 	background-image:none;
   width: 0; 
@@ -110,16 +116,12 @@
 
 .hero > .container {
    padding-top: 20px;
+   
+   @media (min-width: 768px) {
+     padding-top: 40px;
+   }
 }
 
-.hero .hero-primary .module-content {
-	-webkit-border-bottom-right-radius: 0px;
-	-webkit-border-bottom-left-radius: 0px;
-	-moz-border-radius-bottomright: 0px;
-	-moz-border-radius-bottomleft: 0px;
-	border-bottom-right-radius: 0px;
-	border-bottom-left-radius: 0px;
-}
 
 /* Tags */
 .hero .tags {
@@ -241,11 +243,4 @@
 .tags ul.tag-list li:before {
 	right: -13px;
 	top: 0;
-}
-
-
-.main.homepage .module:first-child .module-heading {
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
 }

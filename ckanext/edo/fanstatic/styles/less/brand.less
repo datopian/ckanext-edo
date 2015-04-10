@@ -5,6 +5,7 @@
 @success: #00D64C;
 @warning: #D69300;
 @danger: #D60500;
+@grey: #eaeaeb;
 
 a,
 .btn-link {
@@ -220,11 +221,13 @@ input[type="color"]:focus,
 body {
   font-family: roboto;
   overflow-x:hidden;
+  line-height:1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: robotoblack;
   font-weight:900;
+  color:@secondary;
 }
 
 
@@ -302,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
 [role=main],
 .main {
 	background-image:none;
-	background-color:#f0f0f0;
+	background-color:#fff;
 }
 
 .box {
@@ -365,57 +368,11 @@ body {
 }
 
 .hero {
-	background-color: #ecedf1;
-	background-image: url(../images/background-tile.png);
-	background-repeat: repeat;
-	background-position: center bottom;
-	border-bottom:solid 9px #FFF;
+	background-color: @grey;
+  background-image:none;
+  font-size:16px;
 }
 
-.hero > .container {
-	background-image: url(../images/mask.jpg);
-	background-repeat: no-repeat;
-	background-position: center bottom;
-}
-
-.hero .hero-primary {
-	box-shadow: 0px -7px 14px 4px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0px -7px 14px 4px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0px -7px 14px 4px rgba(0, 0, 0, 0.1);
-}
-.hero .hero-primary .module-content,
-.hero .hero-secondary .module-dark .module-content {
-	box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.8);
-	-moz-box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.8);
-  -webkit-box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.8);
-}
-.hero .hero-primary .module-content {
-	border-bottom:none;
-}
-.hero .hero-secondary .module-dark {
-	padding:0;
-	background-color: transparent;
-	box-shadow: none;
-	-moz-box-shadow: none;
-  -webkit-box-shadow: none;
-	border:none;
-	margin-left: 1px;
-  margin-right: 1px;
-}
-.hero .module-dark .module-content {
-  background-color:@primary;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-
-.hero .search-giant input {
-  border-color: darken(@primary, 10%);
-}
-.hero .search-giant input:focus {
-  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
-}
 
 /* Tags */
 .hero .tags {

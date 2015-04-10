@@ -1,35 +1,34 @@
 {% ckan_extends %}
 
-{% block home_primary_content %}
-<p>Data.edostate.gov.ng is the official data repository for Edo State Government. It provides an easy way to
-find, access and reuse public datasets from the State Government, international organizations and non-
-state actors.</p>
-
-<p>We hope this data will become a platform for improving transparency, catalyzing innovation, and
-enabling social and economic development. We encourage all users to leverage the information in this
-portal to develop tools and applications which benefit all Edo State citizens.</p>
-{% endblock %}
-
-{% block home_tags %}
-  <div class="tags">
-    <h3>{{ _('Popular Tags') }}</h3>
-    {% set tags = h.get_facet_items_dict('tags', limit=3) %}
-    <ul>
-    {% for tag in tags %}
-      <li><a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a></li>
-    {% endfor %}
-    </ul>
+{% block primary_content %}
+<div role="main">
+  <div class="hero">
+    <div class="container">
+      <h1 class="page-heading">{{ _("Welcome to") }} <span>{{ g.site_title }}</span></h1>
+      <p>
+        {% trans %}This is the official data repository for Edo State Government. It provides an easy way to find, access and reuse public datasets from the State Government, international organizations and non-state actors.
+        {% endtrans %}
+      </p>
+    
+      {% set groups=h.get_featured_groups(count=6) %}
+      <ul class="groups">
+      {% for group in groups %}
+        {% set type = group.type or 'group' %}
+        {% set url = h.url_for(type ~ '_read', action='read', id=group.name) %}
+        <li>
+          <a href="{{ url }}" title="{{ _('View {name}').format(name=group.display_name) }}">
+            <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}">
+            {{ group.display_name }}
+          </a>
+        </li>
+      {% endfor %}
+      
+      {% set stats = h.get_site_statistics() %}
+      {% if stats.group_count > 6 %}
+      <li class="more"><a title="{{ stats.group_count - 6 }} more" href="group"><i class="icon-plus-sign"></i><br>More</a></li>
+      {% endif %}
+      </ul>
+    </div>
   </div>
-{% endblock %}
-
-{% block home_image %}{% endblock %}
-
-{% block home_search %}
-  <form class="dataset-search module-content clearfix" method="get" action="{% url_for controller='package', action='search' %}">
-    <h3 class="heading">{{ _("Search For Data") }}</h3>
-    <span class="control-group search-giant">
-      <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{ _('eg. Gold Prices') }}" />
-      <button type="submit" value="{{ _('Search') }}">Submit</button>
-    </span>
-  </form>
+</div>
 {% endblock %}
