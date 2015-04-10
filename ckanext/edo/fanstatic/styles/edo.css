@@ -757,6 +757,8 @@ body {
 }
 .homepage .twitter {
   background-color: #eaeaeb;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 .homepage .twitter a {
   color: #d64c01;

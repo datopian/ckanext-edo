@@ -9,11 +9,11 @@ $( document ).ready(function() {
  * Now go back to settings page, and then go back to widgets page and
  * you should see the widget you just created. Click edit.
  * Look at the URL in your web browser, you will see a long number like this:
- * 345735908357048478
+ * 586492039799377920
  * Use this as your ID below instead!
  */
   twitterFetcher.fetch({
-    "id": '586492039799377920',
+    "id": '440758654015242240',
     "domId": 'tweets',
     "maxTweets": 5,
     "enableLinks": true,
