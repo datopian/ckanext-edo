@@ -4,4 +4,8 @@
   {{ super() }}
   {% resource 'ckanext-edo/styles/edo.css' %}
 {% endblock %}
-      
+
+{% block scripts %}
+  {{ super() }}
+  {% resource 'ckanext-edo/js/twitterFetcher_min.js' %}
+{% endblock %}

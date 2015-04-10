@@ -16,8 +16,8 @@
         font-size:28px;
         line-height:1;
         max-width:490px;
-        margin-left:20px;
-        margin-right:20px;
+        margin-left:15px;
+        margin-right:15px;
         margin-bottom:10px;
         
         span {
@@ -27,8 +27,8 @@
       }
       p {
         max-width:490px;
-        margin-left:20px;
-        margin-right:20px;
+        margin-left:15px;
+        margin-right:15px;
         
         &:last-of-type {
           margin-bottom:20px;
@@ -93,12 +93,12 @@
     
     .intro {
       font-size:16px;
-      padding:20px;
+      padding:30px 15px 15px 15px;
     }
     
     .latest {
       & > div {
-        padding:0 20px 20px 20px;
+        padding:0 15px 15px 15px;
         box-sizing:border-box;
         
         h2 {
@@ -121,6 +121,115 @@
             margin:0 0 15px 0;
             padding:0 0 15px 0;
             border-bottom:solid 2px @grey;
+          }
+        }
+      }
+    }
+  }
+  
+  .twitter {
+    background-color:@grey;
+    
+    .container {
+      position:relative;
+    }
+    
+    h3 {
+      text-transform:uppercase;
+      margin:20px 15px;
+    }
+    
+    .follow {
+      position:absolute;
+      right:15px;
+      top:25px;
+    }
+    
+    .carousel {
+      margin-bottom:0;
+      padding-left:15px;
+      padding-right:15px;
+    }
+    ul.carousel-inner {
+      margin:0;
+      min-height:70px;
+    }
+
+    .user {
+      min-height:36px;
+      
+      @media (min-width: 768px) {
+        float:left;
+        width:220px;
+      }
+      
+      a {
+        color:@secondary;
+        text-decoration:none;
+      }
+      
+      span {
+        display:block;
+        line-height:1.2;
+        
+        &[data-scribe="element\3Aname"] {
+          font-size:16px;
+          font-weight:bold;
+        }
+      }
+      
+      img {
+        width:36px;
+        height:36px;
+        float:left;
+        margin-right:15px;
+      }
+    }
+    .tweet {
+      margin-right:30px;
+      
+      a {
+        color:@primary;
+      }
+      
+      @media (min-width: 768px) {
+        margin-left:230px;
+      }
+    }
+    .timePosted {
+      display:none;
+    }
+    .interact {
+      position:absolute;
+      top:0;
+      right:0;
+      
+      a {
+        display:block;
+        width:20px;
+        height:20px;
+        overflow:hidden;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        color:@secondary;
+        text-decoration:none;
+        
+        &:before {
+          display:block;
+          text-align:center;
+        }
+        
+        &.twitter_reply_icon:before {
+          content: "\F064";
+        }
+        &.twitter_retweet_icon:before {
+          content: "\F079";
+        }
+        &.twitter_fav_icon {
+          display:none;
+          &:before {
+            content: "\F005";
           }
         }
       }
