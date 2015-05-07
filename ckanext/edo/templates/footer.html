@@ -3,6 +3,7 @@
   <div class="row">
     <div class="span10">
       <div class="links">
+        {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
         <a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About') }}</a> | <a href="{{ api_url }}">{{ _('Developers API') }}</a> | {% link_for _('Privacy Statement'), controller='ckanext.edo.plugin:EdoController', action='privacy' %} | {% link_for _('Terms of Use'), controller='ckanext.edo.plugin:EdoController', action='tou' %} | {% link_for _('Remarks'), controller='ckanext.edo.plugin:EdoController', action='remarks_and_speeches' %} | <a href="https://okfn.org/">Open Knowledge</a> | {% link_for _('Accessibility'), controller='ckanext.edo.plugin:EdoController', action='accessibility' %} | {% link_for _('FAQs'), controller='ckanext.edo.plugin:EdoController', action='faq' %} | {% link_for _('Contact Us'), controller='ckanext.edo.plugin:EdoController', action='contact' %}
       </div>
     </div>
