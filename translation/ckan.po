@@ -3153,7 +3153,7 @@ msgid ""
 " belong to a department instead of an individual user.</p> <p>Within "
 "organizations, admins can assign roles and authorise its members, giving "
 "individual users the right to publish datasets from that particular "
-"MDA (e.g. Office of National Statistics).</p> "
+"organization (e.g. Office of National Statistics).</p> "
 msgstr ""
 
 #: ckan/templates/organization/snippets/helper.html:8
@@ -3161,7 +3161,7 @@ msgid ""
 " CKAN Organizations are used to create, manage and publish collections of "
 "datasets. Users can have different roles within an Organization, depending "
 "on their level of authorisation to create, edit and publish. "
-msgstr ""
+msgstr "Ministries, departments and Agencies."
 
 #: ckan/templates/organization/snippets/organization_form.html:10
 msgid "My Organization"
