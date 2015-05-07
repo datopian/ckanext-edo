@@ -38,28 +38,15 @@
     <div class="latest row">
       <div class="datasets span6">
         <h2>Recently Updated Datasets</h2>
-        <dl>
-          <dt><a href="#">List of SUBEB Projects From 2011-2012 in Edo State</a></dt>
-          <dd>Data on SUBEB Projects Stating the Name of School, Location, Project Title, Contractor and Amount of each Project...</dd>
-          <dt><a href="#">EDO-SACA Projects from 2009 - June 2014</a></dt>
-          <dd>Data on projects executed by the Edo State Agency for the Control of Aids, EDO-SACA, is contained in this data-set...</dd>
-          <dt><a href="#">2006 Census Population Distribution by L.G.A</a></dt>
-          <dd>Population Distribution by Local Government Area.</dd>
-        </dl>
-        <a href="dataset">View all datasets</a>
+        {% snippet 'home/snippets/recently_updated_datasets.html' %}
       </div>
       
       <div class="blogposts span6">
         <h2>Latest Blog Posts</h2>
-        <dl>
-          <dt><a href="#">The Relevance Of OpenData To A Democratic Government</a></dt>
-          <dd>With the introduction of computing into various aspects of our daily lives, even the way a state is governed has not been left...</dd>
-          <dt><a href="#">Bridging the gap between Government and the Public by Digitization</a></dt>
-          <dd>Bridging the gap between Government and the Public by...</dd>
-          <dt><a href="#">Why you should develop with open data</a></dt>
-          <dd>The emergence of Open data has brought to light increasing development and outstanding innovations. The importance...</dd>
-        </dl>
-        <a href="#">View all blog posts</a>
+          {%- set featured_feed = h.widgets_get_featured_feed() -%}
+          {% if featured_feed %}
+            {% snippet 'widgets/snippets/feed_definition_list.html', feed_url=featured_feed %}
+          {% endif %}
       </div>
     </div>
   </div>

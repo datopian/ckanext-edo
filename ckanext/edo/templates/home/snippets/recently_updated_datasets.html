@@ -1,0 +1,7 @@
+<dl>
+{% for dataset in h.get_recently_updated_datasets() %}
+  <dt><a href="{{ h.url_for('dataset_read', id=dataset.name) }}">{{ dataset.title }}</a></dt>
+  <dd>{{ dataset.description }}</dd>
+{% endfor %}
+</dl>
+<a href="{{ h.url_for('search') }}">View all datasets</a>
