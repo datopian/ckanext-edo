@@ -1,6 +1,5 @@
 <dl>
 {% for dataset in h.get_recently_updated_datasets() %}
-  {{dataset}}
   <dt><a href="{{ h.url_for('dataset_read', id=dataset.name) }}">{{ dataset.title }}</a></dt>
   <dd>{{ dataset.notes }}</dd>
 {% endfor %}
