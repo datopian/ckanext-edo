@@ -1,0 +1,1 @@
+-e git+https://github.com/ckan/ckanext-widgets.git#egg=ckanext-widgets
