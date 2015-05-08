@@ -9,10 +9,19 @@ into your virtualenv:
 
     ckanext-edo $ python setup.py develop
 
-Add the `edo` plugin to the `plugins` list in your `development.ini` file, for
-example:
+Add the `edo` plugin to the `plugins` list in your configuration file, as well as the
+following options needed:
 
-    ckan.plugins = stats json_preview recline_preview datastore edo
+    ckan.plugins = stats datastore disqus edo recline_view googleanalytics text_view pdf_view resource_proxy datapusher
+    ckan.views.default_views = pdf_view text_view recline_view
 
-Now when you start CKAN (`paster serve development.ini`) the `edo` plugin
-should be active.
+    googleanalytics.id = UA-XXXX
+
+    disqus.name = dataedostate
+
+    ckan.featured_groups=  education agriculture environment finance health projects
+
+    ckan.i18n_directory = /usr/lib/ckan/edo/src/ckanext-edo/
+    ckan.locale_default = en_GB
+
+
