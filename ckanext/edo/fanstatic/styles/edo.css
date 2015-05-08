@@ -75,6 +75,7 @@ Changes should be made to appropriate LESS files, then compiled into edo.css
 .masthead .nav-collapse .site-search .btn-search {
   margin-top: -11px;
   right: 8px;
+  height:auto; width:auto;
 }
 .masthead .nav-collapse .site-search .btn-search i {
   font-size: 22px;
